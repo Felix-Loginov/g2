@@ -1,0 +1,45 @@
+﻿$d_font: 16px/20px 'Roboto-Regular', Verdana;  
+* { margin:0; padding:0; 	-webkit-box-sizing: border-box;	-moz-box-sizing: border-box;	box-sizing: border-box;  }
+html, body {width: 100%; min-width: 960px; color: #000000; background: #ffffff; font:$d_font; cursor: default;}
+html {height: 100%;}
+body {height:auto !important; min-height:100%; height:100%; position:relative;}
+
+html, body, div, applet, object, iframe, blockquote, pre, abbr, acronym, address, big, select, input, textarea,
+cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, dd, dl, dt, fieldset, form, label, legend, caption {font:$d_font; margin:0; padding:0; border:0;}
+a img, :link img, :visited img {border:0;}
+p {padding: 0px; margin: 0px;}
+
+table {border-collapse: collapse; border-spacing: 0;}
+td {vertical-align: top;}
+a {cursor: pointer; outline: none; color: #000000; text-decoration: none; font:$d_font;}
+a:hover {text-decoration: none;}
+.clear {clear: both; line-height: 0px; height: 0px; width: 0px; font-size: 0px;}
+.cl:after{content:"";display:block;clear:both;}
+.hand {cursor: pointer;}
+.display_none {display: none;}
+input{outline:none;}
+textarea{outline:none; resize:none;oveflow:auto;}
+ul{list-style:none;}
+
+$rr: 'Roboto-Regular';
+
+@mixin opa($opa){
+	filter: alpha(Opacity=$opa*10);
+  opacity: $opa/10;
+}
+@mixin bor($rad){
+	border-radius: $rad;
+	-webkit-border-radius: $rad;
+	-moz-border-radius: $rad;
+	-ms-border-radius: $rad;
+}
+
+@mixin linear_gradient($b_grad, $t_grad){
+    background: linear-gradient(to top, $b_grad, $t_grad);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$t_grad}, endColorstr=#{$b_grad});
+    -ms-filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$t_grad}, endColorstr=#{$b_grad});
+}
+
+
+/* site styles */
+
